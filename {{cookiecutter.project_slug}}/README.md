@@ -4,9 +4,9 @@
 
 ## Project structure
 
-- `/{{ cookiecutter.project_slug }}` - put here reusable code created during the project analysis
+- `/{{ cookiecutter.project_slug }}` - reusable code created during the project analysis
 - `/data` - put here data (will not be versioned)
-- `/notebooks` - put here jupyter notebooks
+- `/notebooks` - jupyter notebooks
 
 ## Installation
 
