@@ -10,4 +10,13 @@
 
 ## Installation
 
-`poetry install`
+1. Get [poetry](https://python-poetry.org/docs/).
+2. `poetry install`
+
+## Usage
+
+1. Open one of the notebooks in `notebooks/` folder.
+2. Set the kernel of the notebook to the `.venv/bin/python` executable.
+3. Follow on the notebook for test and demo usage.
+
+If you need to activate the python environment of the project in the terminal, use `poetry shell`.
