@@ -1,7 +1,7 @@
 import os, shutil
 
 REMOVE_PATHS = [
-    '{% if not cookiecutter.project_package %}data{% endif %}',
+    '{% if not cookiecutter.project_package %}{{ cookiecutter.project_slug }}{% endif %}',
 ]
 
 for path in REMOVE_PATHS:
