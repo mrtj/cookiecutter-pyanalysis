@@ -11,7 +11,7 @@
 ## Installation
 
 1. Get [poetry](https://python-poetry.org/docs/).
-2. `poetry install`
+2. `poetry install{% if not cookiecutter.project_package %} --no-root{% endif %}`
 
 ## Usage
 
