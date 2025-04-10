@@ -8,8 +8,10 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 
+{% if cookiecutter.notebooks %}-
 [tool.poetry.group.notebook.dependencies]
 ipykernel = "^6.29.5"
+{% endif -%}
 
 [build-system]
 requires = ["poetry-core"]

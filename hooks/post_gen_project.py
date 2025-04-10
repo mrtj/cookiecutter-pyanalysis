@@ -2,6 +2,7 @@ import os, shutil
 
 REMOVE_PATHS = [
     '{% if not cookiecutter.project_package %}{{ cookiecutter.project_slug }}{% endif %}',
+    '{% if not cookiecutter.notebooks %}notebooks{% endif %}',
 ]
 
 for path in REMOVE_PATHS:

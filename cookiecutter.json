@@ -1,9 +1,10 @@
 {
-    "full_name": "Janos Tolgyesi",
-    "email": "janos.tolgyesi@gmail.com",
     "project_name": "Python Analysis",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "project_short_description": "{{ cookiecutter.project_name }} PoC project",
+    "full_name": "Janos Tolgyesi",
+    "email": "janos.tolgyesi@gmail.com",
+    "version": "0.1.0",
     "project_package": true,
-    "version": "0.1.0"
+    "notebooks": true
 }
