@@ -4,10 +4,11 @@
 
 ## Project structure
 
-{% if cookiecutter.project_package %}- `/{{ cookiecutter.project_slug }}` - reusable code created during the project analysis
+{% if cookiecutter.project_package %}- `/{{ cookiecutter.project_slug }}` - Core package containing reusable extraction code
 {% endif -%}
-- `/data` - put here data (will not be versioned)
-- `/notebooks` - jupyter notebooks
+- `/data` -  Directory for project data (not versioned)
+{-% if cookiecutter.notebooks %}
+- `/notebooks` - Jupyter notebooks with examples and demos{% endif %}
 
 ## Installation
 
