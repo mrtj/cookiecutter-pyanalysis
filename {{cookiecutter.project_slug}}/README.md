@@ -7,8 +7,9 @@
 {% if cookiecutter.project_package %}- `/{{ cookiecutter.project_slug }}` - Core package containing reusable extraction code
 {% endif -%}
 - `/data` -  Directory for project data (not versioned)
-{-% if cookiecutter.notebooks %}
-- `/notebooks` - Jupyter notebooks with examples and demos{% endif %}
+{%- if cookiecutter.notebooks %}
+- `/notebooks` - Jupyter notebooks with examples and demos
+{%- endif %}
 
 ## Installation
 
