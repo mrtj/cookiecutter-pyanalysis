@@ -8,9 +8,9 @@ authors = [
 ]
 requires-python = "~={{ cookiecutter.python_version }}"
 dependencies = [
-    {% if cookiecutter.notebooks %}-
-    { name = "ipykernel", version = "^6.29.5" },
-    {% endif -%}
+    {%- if cookiecutter.notebooks %}
+    "ipykernel>=6.29.5",
+    {%- endif %}
 ]
 
 [build-system]
