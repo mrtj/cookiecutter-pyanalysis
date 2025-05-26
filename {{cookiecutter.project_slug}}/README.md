@@ -11,15 +11,26 @@
 - `/notebooks` - Jupyter notebooks with examples and demos
 {%- endif %}
 
-## Installation
+## Installation and usage
 
-1. Get [poetry](https://python-poetry.org/docs/).
-2. `poetry install{% if not cookiecutter.project_package %} --no-root{% endif %}`
+Create a copy of `.env.template` as `.env` and fill out your credentials.
 
-## Usage
+### uv (recommended)
 
-1. Open one of the notebooks in `notebooks/` folder.
-2. Set the kernel of the notebook to the `.venv/bin/python` executable.
-3. Follow on the notebook for test and demo usage.
+1. [Get uv](https://github.com/astral-sh/uv).
+2. `uv venv`
+{%- if cookiecutter.notebooks %}
+3. Open the notebooks and set the kernel to the newly created `.venv/bin/python` interpreter.
+4. Follow on the notebook for test and demo usage.
+{%- endif %}
 
-If you need to activate the python environment of the project in the terminal, use `poetry shell`.
+### Manual venv (deprecated)
+
+```sh
+$ python -venv .venv
+$ source .venv/bin/activate
+(.venv) $ pip install . -e
+```
+{%- if cookiecutter.notebooks %}
+Open the notebooks and set the kernel to the newly created `.venv` virtual environment.
+{%- endif %}

@@ -5,6 +5,7 @@
     "full_name": "Janos Tolgyesi",
     "email": "janos.tolgyesi@gmail.com",
     "version": "0.1.0",
+    "python_version": "3.11",
     "project_package": true,
     "notebooks": true
 }

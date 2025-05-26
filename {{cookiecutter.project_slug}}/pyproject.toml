@@ -1,18 +1,21 @@
-[tool.poetry]
+[project]
 name = "{{ cookiecutter.project_slug }}"
 version = "{{ cookiecutter.version }}"
 description = "{{ cookiecutter.project_short_description }}"
-authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.11"
-
-{% if cookiecutter.notebooks %}-
-[tool.poetry.group.notebook.dependencies]
-ipykernel = "^6.29.5"
-{% endif -%}
+authors = [
+    { name = "{{ cookiecutter.full_name }}", email = "{{ cookiecutter.email }}" }
+]
+requires-python = "~={{ cookiecutter.python_version }}"
+dependencies = [
+    {% if cookiecutter.notebooks %}-
+    { name = "ipykernel", version = "^6.29.5" },
+    {% endif -%}
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build~=0.7.3"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
