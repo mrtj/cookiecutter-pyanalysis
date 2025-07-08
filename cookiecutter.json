@@ -1,6 +1,6 @@
 {
     "project_name": "Python Analysis",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "project_slug": "{{ cookiecutter.project_name | slugify | replace('-', '_') }}",
     "project_short_description": "{{ cookiecutter.project_name }} PoC project",
     "full_name": "Janos Tolgyesi",
     "email": "janos.tolgyesi@gmail.com",
